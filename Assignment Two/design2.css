@@ -1,0 +1,405 @@
+    
+      :root {
+        --bg-dark: #0d0d0d;
+        --bg-card: #141414;
+        --bg-card-hover: #1a1a1a;
+        --border-card: #2a2a2a;
+        --accent-orange: #e87d2b;
+        --accent-gold: #c9892a;
+        --text-white: #ffffff;
+        --text-muted: #9a9a9a;
+        --text-subheading: #cccccc;
+        --font-display: "Playfair Display", serif;
+        --font-body: "Lato", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-white);
+        font-family: var(--font-body);
+      }
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 20px 36px;
+      }
+
+      .header__title {
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: var(--text-white);
+      }
+
+      /* Decorative divider below the title */
+      .header__divider {
+        position: relative; /* anchor for the absolute diamond */
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 14px;
+        width: 160px;
+      }
+
+      .header__divider::before,
+      .header__divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--accent-orange),
+          transparent
+        );
+      }
+
+      /* The small "W" / flame icon in the centre */
+      .header__icon {
+        position: absolute; /* sits on top of the line */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        color: var(--accent-orange);
+        line-height: 1;
+      }
+
+      .main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px 60px;
+      }
+
+
+      .cards-section {
+        display: flex; /* horizontal row */
+        gap: 16px;
+        flex-wrap: wrap; /* wraps on smaller screens */
+        margin-bottom: 24px;
+      }
+
+      .card {
+        position: relative; /* needed for badge (absolute) */
+        flex: 1 1 220px; /* grow / shrink evenly */
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-card);
+        border-radius: 16px;
+        padding: 20px 20px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        transition:
+          border-color 0.25s ease,
+          background-color 0.25s ease;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      /* Highlighted / selected card (first one) */
+      .card--active {
+        border-color: var(--accent-orange);
+        background-color: #1a1208;
+      }
+
+      .card:hover {
+        border-color: var(--accent-gold);
+        background-color: var(--bg-card-hover);
+      }
+
+      /* ---- Badge (Signature / New) ---- */
+      .card__badge {
+        position: absolute; /* floats over the card */
+        top: 14px;
+        left: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: rgba(232, 125, 43, 0.15);
+        border: 1px solid var(--accent-orange);
+        border-radius: 20px;
+        padding: 3px 10px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--accent-orange);
+        letter-spacing: 0.04em;
+        text-transform: capitalize;
+      }
+
+      .card__badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--accent-orange);
+        flex-shrink: 0;
+      }
+
+      /* Star icon for "Signature" badge */
+      .card__badge-star {
+        font-size: 0.7rem;
+      }
+
+      /* ---- Drink image ---- */
+      .card__image-wrap {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .card__image {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        /* subtle drop-shadow so transparent PNGs float nicely */
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6));
+      }
+
+      /* ---- Text block ---- */
+      .card__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+      }
+
+      .card__name {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-white);
+        text-align: center;
+      }
+
+      .card__desc {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        text-align: center;
+      }
+
+      .card__divider {
+        width: 30px;
+        height: 1px;
+        background-color: #3a3a3a;
+        margin: 4px auto;
+      }
+
+      .card__price {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--accent-orange);
+        letter-spacing: 0.02em;
+      }
+
+      
+      .special-section {
+        position: relative; /* anchor for the decorative plant */
+        display: flex;
+        align-items: center;
+        gap: 0;
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-card);
+        border-radius: 16px;
+        overflow: hidden;
+        min-height: 300px;
+      }
+
+      /* ---- Left: food image ---- */
+      .special__image-wrap {
+        position: relative; /* so the image can overflow slightly */
+        flex-shrink: 0;
+        width: 280px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 20px 0 0 20px;
+      }
+
+      .special__image {
+        width: 100%;
+        max-width: 280px;
+        object-fit: contain;
+        filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.7));
+        /* subtle upward shift so the dish appears to "float" */
+        transform: translateY(8px);
+      }
+
+      /* ---- Right: text content ---- */
+      .special__content {
+        flex: 1;
+        padding: 44px 48px 44px 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .special__tag {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        color: var(--accent-orange);
+        text-transform: uppercase;
+      }
+
+      .special__title {
+        font-family: var(--font-display);
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-weight: 700;
+        color: var(--text-white);
+        line-height: 1.15;
+      }
+
+      .special__subtitle {
+        font-size: 0.9rem;
+        color: var(--text-subheading);
+      }
+
+      .special__body {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        max-width: 460px;
+      }
+
+      /* CTA button */
+      .special__btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+        padding: 12px 28px;
+        border: 1px solid var(--accent-orange);
+        border-radius: 50px;
+        background: transparent;
+        color: var(--accent-orange);
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        width: fit-content;
+        transition:
+          background-color 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .special__btn:hover {
+        background-color: var(--accent-orange);
+        color: var(--text-white);
+      }
+
+      .special__btn-arrow {
+        font-size: 1rem;
+      }
+
+      .special__plant {
+        position: absolute;
+        right: 20px;
+        bottom: 5;
+        opacity: 0.15;
+        pointer-events: none;
+      }
+
+      .special__plant svg {
+        width: 160px;
+        height: auto;
+      }
+
+
+      .footer {
+        border-top: 1px solid #222;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 20px 48px;
+      }
+
+      .footer__copy {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      /* Nav links */
+      .footer__nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        list-style: none;
+      }
+
+      .footer__nav li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .footer__nav a {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .footer__nav a:hover {
+        color: var(--text-white);
+      }
+
+      .footer__dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--accent-orange);
+      }
+
+      /* Social icons */
+      .footer__social {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer__social-label {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin-right: 4px;
+      }
+
+      .footer__social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border: 1px solid var(--accent-orange);
+        border-radius: 50%;
+        color: var(--accent-orange);
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+
+      .footer__social-icon:hover {
+        border-color: var(--accent-orange);
+        color: var(--accent-orange);
+      }
+
+
+    
