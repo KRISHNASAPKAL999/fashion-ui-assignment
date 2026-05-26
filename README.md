@@ -79,7 +79,7 @@ This project was designed to demonstrate and practice:
 ### View
 ![ ](https://github.com/KRISHNASAPKAL999/fashion-ui-assignment/blob/main/Screenshot%202026-05-26%20122041.png?raw=true)
 ![Assignment Two](https://github.com/KRISHNASAPKAL999/fashion-ui-assignment/blob/main/Screenshot%202026-05-26%20155326.png?raw=true)
-
+![Assignment Two](https://github.com/KRISHNASAPKAL999/fashion-ui-assignment/blob/main/Assignment%20Two/Screenshot%202026-05-26%20200317.png?raw=true)
 ---
 
 ## 🚀 How to Run
