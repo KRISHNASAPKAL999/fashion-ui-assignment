@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loomé — Cotton Weave Scarf</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+   
+</head>
+
+<body>
+
+    <!-- ───────────── NAVBAR ───────────── -->
+    <nav class="navbar">
+        <div class="logo">loom<span>é.</span></div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Shop</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <!-- Cart with badge using position: absolute -->
+            <div class="cart-wrapper">
+                <i class="ri-shopping-bag-line"></i>
+                <span class="cart-badge">2</span>
+            </div>
+            <div class="hamburger">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ───────────── MAIN PAGE ───────────── -->
+    <main class="page">
+
+        <!-- LEFT COLUMN -->
+        <div class="left-col">
+            <div class="new-collection">
+                <i class="ri-plant-line"></i>
+                <span>New Collection</span>
+            </div>
+
+            <h1 class="product-title">a cotton<br>weave</h1>
+            <div class="title-divider"></div>
+
+            <p class="product-desc">
+                Crafted from 100% organic cotton with a soft, breathable feel.
+                Perfect for all seasons and everyday elegance.
+            </p>
+
+            <!-- Color Swatches -->
+            <div class="color-section">
+                <p class="color-label">colors</p>
+                <div class="swatches">
+                    <div class="swatch olive active"></div>
+                    <div class="swatch sand"></div>
+                    <div class="swatch pink"></div>
+                </div>
+            </div>
+
+            <!-- Details -->
+            <div class="details-section">
+                <div class="details-header">
+                    <span>Details</span>
+                    <div class="details-line"></div>
+                </div>
+                <p class="details-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusamus, sapiente. Ipsam maiores nemo, quidem veniam et
+                    atque suscipit, saepe doloribus ab molestiae deserunt? Totam
+                    natus eligendi neque.
+                </p>
+            </div>
+
+            <!-- Features -->
+            <div class="features">
+                <div class="feature-item">
+                    <i class="ri-leaf-line"></i>
+                    <div class="feature-name">Organic<br>Cotton</div>
+                </div>
+                <div class="feature-item">
+                   <i class="ri-leaf-fill"></i>
+                    <div class="feature-name">Soft &<br>Lightweight</div>
+                </div>
+                <div class="feature-item">
+                    <i class="ri-grid-line"></i>
+                    <div class="feature-name">Handmade<br>Weave</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CENTER COLUMN — IMAGE with absolutely positioned overlays -->
+        <div class="center-col">
+
+            <!-- .image-section is position:relative — anchors the vertical label -->
+            <div class="image-section">
+
+                <!-- Vertical side label — position: absolute, LEFT of the card -->
+                <div class="vertical-label">cotton twill scarf.</div>
+
+                <div class="product-image-wrap">
+
+                    <!-- Main product photo -->
+                    <img src="girl.png" alt="Cotton weave scarf - model wearing hat and scarf in winter" />
+
+                    <!-- Price badge — position: absolute -->
+                    <div class="price-badge">$488</div>
+
+                    <!-- Rating badge — position: absolute -->
+                    <div class="rating-badge">
+                        <span>Rating</span>
+                        <div class="stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line empty"></i>
+                        </div>
+                    </div>
+
+
+                    <!-- Add to bag — position: absolute -->
+                    <button class="add-to-bag" onclick="alert('Added to bag!')">
+                        <i class="ri-shopping-bag-line"></i>
+                        Add to bag
+                    </button>
+
+                </div><!-- /product-image-wrap -->
+
+            </div><!-- /image-section -->
+
+            <!-- Trust bar below image -->
+            <div class="trust-bar">
+                <div class="trust-item">
+                    <i class="ri-shield-check-line"></i>
+                    <div class="trust-text">
+                        <strong>Secure</strong>
+                        <span>Payment</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="ri-truck-line"></i>
+                    <div class="trust-text">
+                        <strong>Free Shipping</strong>
+                        <span>Over $100</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="ri-refresh-line"></i>
+                    <div class="trust-text">
+                        <strong>Easy Returns</strong>
+                        <span>30 Days</span>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /center-col -->
+
+        <!-- RIGHT COLUMN — Thumbnails -->
+        <div class="right-col">
+            <div class="thumb">
+                <img src="girl.png" alt="Model with scarf thumbnail" />
+            </div>
+            <div class="thumb">
+                <img src="fabric.png" alt="Fabric close-up beige" />
+            </div>
+            <div class="thumb">
+                <img src="fabric-label.png" alt="Fabric label detail" />
+            </div>
+            <div class="thumb">
+                <img src="cotton flowers.png" alt="Cotton flowers" />
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
