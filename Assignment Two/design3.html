@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScaleX - Insights & Blogs</title>
+    <!-- Tailwind CSS for modern utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium sans-serif font matching the modern design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body class="text-white antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <!-- Stylized S/ScaleX Icon -->
+            <div class="bg-white text-black p-1.5 rounded-md flex items-center justify-center font-bold tracking-tighter">
+                <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 7h-8L6.5 11.5 11 16h8l4.5-4.5L19 7zM5 7l-4.5 4.5L5 16h5l4.5-4.5L10 7H5z"/>
+                </svg>
+            </div>
+            <span class="text-xl font-bold tracking-tight">ScaleX</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8 text-[15px] font-medium text-zinc-400">
+            <a href="#" class="hover:text-white transition duration-200">Home</a>
+            <a href="#" class="hover:text-white transition duration-200">About Us</a>
+            <a href="#" class="text-white border-b-2 border-transparent pb-1">Blogs</a>
+            <a href="#" class="hover:text-white transition duration-200">Contact Us</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div>
+            <a href="#" class="bg-[#161618] hover:bg-[#222224] text-[14px] font-medium px-5 py-2.5 rounded-xl transition duration-200 border border-zinc-800">
+                Get Started
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-6 pt-16 pb-24">
+        
+        <!-- Hero Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-6xl md:text-[84px] font-bold tracking-tight text-white mb-8">
+                Insights & Blogs
+            </h1>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap justify-center items-center gap-3 mb-14">
+            <button class="bg-[#ff4f12] text-white text-[15px] font-medium px-6 py-3 rounded-full transition duration-200">
+                All
+            </button>
+            <button class="bg-[#161616] hover:bg-[#222222] text-zinc-400 hover:text-white text-[15px] font-medium px-6 py-3 rounded-full transition duration-200">
+                Tech
+            </button>
+            <button class="bg-[#161616] hover:bg-[#222222] text-zinc-400 hover:text-white text-[15px] font-medium px-6 py-3 rounded-full transition duration-200">
+                SaaS
+            </button>
+            <button class="bg-[#161616] hover:bg-[#222222] text-zinc-400 hover:text-white text-[15px] font-medium px-6 py-3 rounded-full transition duration-200">
+                Marketing
+            </button>
+        </div>
+
+        <!-- Blog Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Card 1 (Tech) -->
+            <div class="bg-[#09090b] rounded-[32px] p-4 flex flex-col justify-between border border-zinc-900/50 hover:border-zinc-800 transition duration-300 group cursor-pointer">
+                <div>
+                    <!-- Image Wrapper with Exact Aspect Match -->
+                    <div class="overflow-hidden rounded-[24px] mb-6 aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=600&q=80" 
+                             alt="Martini glass on red background" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Tag -->
+                    <span class="inline-block bg-[#23120c] text-[#ff6b3d] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+                        Tech
+                    </span>
+                    <!-- Title -->
+                    <h3 class="text-2xl font-bold leading-tight text-zinc-100 group-hover:text-white transition duration-200 px-1">
+                        The Ultimate Guide To SaaS Marketing
+                    </h3>
+                </div>
+                <!-- Date -->
+                <div class="mt-8 text-sm text-zinc-500 px-1 pb-2">
+                    May 23, 2025
+                </div>
+            </div>
+
+            <!-- Card 2 (SaaS) -->
+            <div class="bg-[#09090b] rounded-[32px] p-4 flex flex-col justify-between border border-zinc-900/50 hover:border-zinc-800 transition duration-300 group cursor-pointer">
+                <div>
+                    <!-- Image Wrapper -->
+                    <div class="overflow-hidden rounded-[24px] mb-6 aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" 
+                             alt="Green modern chair on warm studio background" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Tag -->
+                    <span class="inline-block bg-[#23120c] text-[#ff6b3d] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+                        SaaS
+                    </span>
+                    <!-- Title -->
+                    <h3 class="text-2xl font-bold leading-tight text-zinc-100 group-hover:text-white transition duration-200 px-1">
+                        5 Key Trends In SaaS Growth For 2025
+                    </h3>
+                </div>
+                <!-- Date -->
+                <div class="mt-8 text-sm text-zinc-500 px-1 pb-2">
+                    May 23, 2025
+                </div>
+            </div>
+
+            <!-- Card 3 (Marketing) -->
+            <div class="bg-[#09090b] rounded-[32px] p-4 flex flex-col justify-between border border-zinc-900/50 hover:border-zinc-800 transition duration-300 group cursor-pointer">
+                <div>
+                    <!-- Image Wrapper -->
+                    <div class="overflow-hidden rounded-[24px] mb-6 aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=600&q=80" 
+                             alt="Orange tabby cat looking up" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Tag -->
+                    <span class="inline-block bg-[#23120c] text-[#ff6b3d] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+                        Marketing
+                    </span>
+                    <!-- Title -->
+                    <h3 class="text-2xl font-bold leading-tight text-zinc-100 group-hover:text-white transition duration-200 px-1">
+                        How Data-Driven Strategies Are Important
+                    </h3>
+                </div>
+                <!-- Date -->
+                <div class="mt-8 text-sm text-zinc-500 px-1 pb-2">
+                    May 23, 2025
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
