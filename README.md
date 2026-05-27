@@ -54,6 +54,12 @@ fashion-ui-assignment/
 ├── style.css               # Stylesheet with all CSS rules
 ├── README.md               # Project documentation (this file)
 └── images/                 # (Optional) Images and media files
+└── Assignment Two
+      └── design2.html
+      └── design2.css
+      └── design3.html
+      └── index.html
+      └── style.css
 
 ```
 
